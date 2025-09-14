@@ -3,6 +3,8 @@
 A secure and efficient To-Do application built with **Flask** and **Flask-JWT-Extended** for user authentication. Data is persistently stored in **SQLite**, ensuring lightweight and fast database operations. The application is fully **deployed on Render** for easy access and scalability. Endpoints are thoroughly tested using **Postman**, providing a robust and reliable API experience.
 
 ---
+## 🌐 Live Demo
+Check out the live app here: https://jwt-to-do-app.onrender.com
 
 ## 🚀 Features
 
@@ -74,3 +76,4 @@ App will start at: http://127.0.0.1:5000/
 - This repo includes:
 - requirements.txt
 - Procfile
+
