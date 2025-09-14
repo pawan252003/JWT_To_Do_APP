@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_jwt_extended import JWTManager
 import os
@@ -8,6 +8,10 @@ db=SQLAlchemy()
 #App and DB Setup
 def create_app():
     app=Flask(__name__)
+
+    @app.route("/")
+    def index():
+        return jsonify({"msg": "Flask JWT To-Do API is running!"})
 
     app.config["SQLALCHEMY_DATABASE_URI"]='sqlite:///todo.db'
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]=False
@@ -22,6 +26,7 @@ def create_app():
     app.register_blueprint(tasks_bp)
 
     return app
+
 
 
 
